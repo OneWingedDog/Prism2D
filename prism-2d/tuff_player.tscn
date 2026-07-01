@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1n40uo005tr6"]
+
+[ext_resource type="Texture2D" uid="uid://wnpcj6s6tv3k" path="res://Assets/Sprites/Screenshot_20260630-083943.png" id="1_3nqms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
+size = Vector2(322, 818)
+
+[node name="Tuff player" type="Node2D" unique_id=1752257990]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=234204907]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1155263334]
+position = Vector2(3.0000153, -1.0000076)
+scale = Vector2(0.30635145, 0.78818446)
+texture = ExtResource("1_3nqms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_dxols")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=395622131]
+scale = Vector2(3.9600003, 1)
+zoom = Vector2(0.25, 0.25)
