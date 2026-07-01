@@ -1,24 +1,26 @@
 [gd_scene format=3 uid="uid://1n40uo005tr6"]
 
 [ext_resource type="Texture2D" uid="uid://wnpcj6s6tv3k" path="res://Assets/Sprites/Screenshot_20260630-083943.png" id="1_3nqms"]
+[ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scenes/character_body_2d.gd" id="1_vmvto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
-size = Vector2(322, 818)
+size = Vector2(162.2143, 383.99997)
 
 [node name="Tuff player" type="Node2D" unique_id=1752257990]
 scale = Vector2(0.55999935, 0.55999935)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=234204907]
+script = ExtResource("1_vmvto")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1155263334]
-position = Vector2(3.0000153, -1.0000076)
-scale = Vector2(0.30635145, 0.78818446)
+position = Vector2(-0.4554596, -1.6252289)
+scale = Vector2(0.15604106, 0.3708316)
 texture = ExtResource("1_3nqms")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
-position = Vector2(3, 0)
+position = Vector2(0.7499008, -0.85736084)
 shape = SubResource("RectangleShape2D_dxols")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=395622131]
 scale = Vector2(3.9600003, 1)
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.7, 0.7)
