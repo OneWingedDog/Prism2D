@@ -8,6 +8,8 @@ func get_input():
 	print(input_direction)
 	if Input.is_action_just_pressed("Jump"):
 		velocity.y = -200
+	if not Input.is_action_pressed("Jump"):
+		velocity.y = 0
 	
 func _physics_process(delta):
 	get_input()
