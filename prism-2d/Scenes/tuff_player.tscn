@@ -65,8 +65,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
-size = Vector2(162.2143, 383.99997)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkrn0"]
+radius = 64.2858
+height = 391.0009
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxols"]
+radius = 108.9287
+height = 439.28622
 
 [node name="Tuff player" type="Node2D" unique_id=1752257990]
 scale = Vector2(0.55999935, 0.55999935)
@@ -79,11 +84,21 @@ scale = Vector2(10.544655, 10.544655)
 sprite_frames = SubResource("SpriteFrames_0eb53")
 animation = &"Wall Cling"
 autoplay = "default"
+frame_progress = 0.9405236
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
-position = Vector2(0.7499008, -0.85736084)
-shape = SubResource("RectangleShape2D_dxols")
+position = Vector2(-16.071447, -14.285731)
+shape = SubResource("CapsuleShape2D_mkrn0")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=395622131]
 scale = Vector2(3.9600003, 1)
 zoom = Vector2(0.7, 0.7)
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=244824990]
+position = Vector2(-3.5714328, 1.7857164)
+shape = SubResource("CapsuleShape2D_dxols")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]

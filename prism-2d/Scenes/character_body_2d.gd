@@ -11,14 +11,14 @@ var terminal_velocity:int = 10000
 @onready var input_direction:Vector2
 @onready var incnum:float = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var touchingwall:bool 
 
 func get_input():
 	
 	if input_direction.x == (1.0) or (-1.0) :
 		oldinpt = input_direction
 	
-	print(jump)
-	print(incnum)
+
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
 	
@@ -27,7 +27,8 @@ func get_input():
 	
 	velocity.x = input_direction.x * (speed * incnum)
 	
-	
+	if Input.is_action_just_pressed("Jump") and jump == true:
+		walljump()
 	
 	
 	if Input.is_action_just_pressed("Jump") and jump == false:
@@ -58,8 +59,8 @@ func _physics_process(delta):
 	
 	if velocity.y == 0:
 		jump = false
+		touchingwall = false
 
-	
 
 	inum = inum + 3
 
@@ -72,3 +73,21 @@ func _physics_process(delta):
 		velocity.y = terminal_velocity
 	get_input()
 	move_and_slide()
+	print(touchingwall)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("ent")
+	if jump == true:
+		touchingwall = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	print("ext")
+	touchingwall = false
+
+
+func walljump():
+	if touchingwall == true:
+		inum = 0
+		velocity.y = jumpv 
