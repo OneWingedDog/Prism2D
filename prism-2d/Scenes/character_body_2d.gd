@@ -21,7 +21,7 @@ func get_input():
 	if input_direction.x == (1.0) or (-1.0) :
 		oldinpt = input_direction
 	
-	counteractingforce = counteractingforce - 25
+	counteractingforce = counteractingforce - 35
 	if counteractingforce < 50:
 		counteractingforce = 0
 	
@@ -59,6 +59,10 @@ func get_input():
 
 func _physics_process(delta):
 	
+	if touchingwall == true:
+		if velocity.y > 0:
+			inum = inum/2
+	
 	if not incnum > 0.9:
 		incnum = incnum + 0.025
 	else:
@@ -85,13 +89,14 @@ func _physics_process(delta):
 		
 	get_input()
 	move_and_slide()
-	print(predir)
+	print(velocity.y)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("ent")
 	if jump == true:
 		touchingwall = true
+
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
