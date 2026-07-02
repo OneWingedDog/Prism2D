@@ -14,8 +14,8 @@ func get_input():
 		inum = 0
 		velocity.y = jumpv 
 		jump = true 
-	if jump == true:
-		velocity.y = velocity.y + inum
+
+	velocity.y = velocity.y + inum
 
 func _physics_process(delta):
 	if velocity.y == 0:
