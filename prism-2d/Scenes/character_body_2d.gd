@@ -19,7 +19,8 @@ func get_input():
 func _physics_process(delta):
 	print(inum)
 	inum = inum + 3
-
+	if position.y > 12000:
+		global_position = Vector2(0,0)
 	if inum > inum_max:
 		inum = inum_max
 		
