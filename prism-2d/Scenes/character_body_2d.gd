@@ -40,10 +40,10 @@ func get_input():
 
 	velocity.y = velocity.y + inum
 	
-	if velocity.x >= 0.1:
+	if velocity.x > 0.1:
 		animated_sprite_2d.flip_h = false
-	if velocity.x >= -0.1:
-		animated_sprite_2d.flip_h = false
+	if velocity.x < -0.1:
+		animated_sprite_2d.flip_h = true
 	if velocity.x != 0:
 		animated_sprite_2d.play("Walk_Run")
 	else:
