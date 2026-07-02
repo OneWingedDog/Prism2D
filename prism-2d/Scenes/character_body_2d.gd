@@ -89,18 +89,15 @@ func _physics_process(delta):
 		
 	get_input()
 	move_and_slide()
-	print(velocity.y)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("ent")
 	if jump == true:
 		touchingwall = true
 
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	print("ext")
 	touchingwall = false
 
 
