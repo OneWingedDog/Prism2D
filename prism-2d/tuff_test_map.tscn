@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://c54seed38hw1g"]
-
-[ext_resource type="PackedScene" uid="uid://1n40uo005tr6" path="res://tuff_player.tscn" id="1_3ncjb"]
-
-[node name="Tuff test map" type="Node2D" unique_id=784948953]
-
-[node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]

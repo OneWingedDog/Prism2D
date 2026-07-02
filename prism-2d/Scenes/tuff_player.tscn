@@ -6,6 +6,7 @@
 size = Vector2(322, 818)
 
 [node name="Tuff player" type="Node2D" unique_id=1752257990]
+scale = Vector2(0.55999935, 0.55999935)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=234204907]
 
