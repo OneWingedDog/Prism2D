@@ -11,8 +11,10 @@ var terminal_velocity:int = 10000
 @onready var input_direction:Vector2
 @onready var incnum:float = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var touchingwall:bool 
-@onready var counteractingforce = 0
+var touchingwall:bool 
+var counteractingforce = 0
+var dir:int = 3
+var predir
 
 func get_input():
 	
@@ -34,10 +36,10 @@ func get_input():
 		walljump()
 	
 	
-	if Input.is_action_just_pressed("Jump") and jump == false:
-		inum = 0
-		velocity.y = jumpv 
-		jump = true 
+	if Input.is_action_just_pressed("Jump") and jump == false :
+			inum = 0
+			velocity.y = jumpv 
+			jump = true 
 
 	if not oldinpt == input_direction and jump == false :
 		incnum = 0
@@ -46,8 +48,10 @@ func get_input():
 	
 	if velocity.x > 0.1:
 		animated_sprite_2d.flip_h = false
+		dir = 1
 	if velocity.x < -0.1:
 		animated_sprite_2d.flip_h = true
+		dir = 0
 	if velocity.x != 0:
 		animated_sprite_2d.play("Walk_Run")
 	else:
@@ -61,6 +65,8 @@ func _physics_process(delta):
 		incnum = 1
 	
 	if velocity.y == 0:
+		predir = 3
+		dir = 3
 		jump = false
 		touchingwall = false
 	
@@ -79,7 +85,7 @@ func _physics_process(delta):
 		
 	get_input()
 	move_and_slide()
-	print(counteractingforce)
+	print(predir)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -95,6 +101,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 func walljump():
 	if touchingwall == true:
-		inum = 0
-		velocity.y = jumpv 
-		counteractingforce = -velocity.x * 2 
+		if not predir == dir or dir == 3:
+			predir = dir 
+			inum = 0
+			velocity.y = jumpv 
+			counteractingforce = -velocity.x * 2 
