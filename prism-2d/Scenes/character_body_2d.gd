@@ -10,6 +10,7 @@ var terminal_velocity:int = 10000
 @onready var oldinpt
 @onready var input_direction: Vector2 
 @onready var incnum:float = 0
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func get_input():
 	
@@ -30,7 +31,15 @@ func get_input():
 		jump = true 
 
 	velocity.y = velocity.y + inum
-
+	
+	if velocity.x >= 0.1:
+		animated_sprite_2d.flip_h = false
+	if velocity.x >= -0.1:
+		animated_sprite_2d.flip_h = false
+	if velocity.x != 0:
+		animated_sprite_2d.play("Walk_Run")
+	else:
+		animated_sprite_2d.play("default")
 func _physics_process(delta):
 	
 	if not incnum > 0.9:
