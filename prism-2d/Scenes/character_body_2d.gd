@@ -21,6 +21,10 @@ func get_input():
 	print(incnum)
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
+	
+	
+	
+	
 	velocity.x = input_direction.x * (speed * incnum)
 	
 	
