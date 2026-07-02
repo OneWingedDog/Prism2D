@@ -8,27 +8,31 @@ var inum_max = 50
 var jump:bool 
 var terminal_velocity:int = 10000
 @onready var oldinpt
-@onready var input_direction: Vector2 
+@onready var input_direction:Vector2
 @onready var incnum:float = 0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func get_input():
 	
-	oldinpt = input_direction
+	if input_direction.x == (1.0) or (-1.0) :
+		oldinpt = input_direction
 	
-	
+	print(jump)
+	print(incnum)
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
 	velocity.x = input_direction.x * (speed * incnum)
 	
-	if not oldinpt == input_direction:
-		incnum = 0
+	
 	
 	
 	if Input.is_action_just_pressed("Jump") and jump == false:
 		inum = 0
 		velocity.y = jumpv 
 		jump = true 
+
+	if not oldinpt == input_direction and jump == false :
+		incnum = 0
 
 	velocity.y = velocity.y + inum
 	
@@ -40,6 +44,7 @@ func get_input():
 		animated_sprite_2d.play("Walk_Run")
 	else:
 		animated_sprite_2d.play("default")
+
 func _physics_process(delta):
 	
 	if not incnum > 0.9:
