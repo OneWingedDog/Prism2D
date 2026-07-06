@@ -16,6 +16,8 @@ var counteractingforce = 0
 var dir:int = 3
 var predir
 
+
+
 func get_input():
 	
 	if input_direction.x == (1.0) or (-1.0) :
@@ -46,6 +48,7 @@ func get_input():
 
 	velocity.y = velocity.y + inum
 	
+	# Running and Flipping
 	if velocity.x > 0.1:
 		animated_sprite_2d.flip_h = false
 		dir = 1
@@ -56,7 +59,9 @@ func get_input():
 		animated_sprite_2d.play("Run")
 	else:
 		animated_sprite_2d.play("default")
+	# Jumping animation
 
+		
 func _physics_process(delta):
 	
 	if touchingwall == true:
@@ -94,7 +99,6 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if jump == true:
 		touchingwall = true
-
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
