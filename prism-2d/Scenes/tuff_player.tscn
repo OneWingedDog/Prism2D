@@ -36,7 +36,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_s41q2")
 }],
 "loop": 1,
-"name": &"Walk_Run",
+"name": &"Run",
 "speed": 10.0
 }, {
 "frames": [{
@@ -82,9 +82,8 @@ script = ExtResource("1_vmvto")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 scale = Vector2(10.544655, 10.544655)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Wall Cling"
+animation = &"Run"
 autoplay = "default"
-frame_progress = 0.57136166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 position = Vector2(-16.071447, -14.285731)

@@ -53,7 +53,7 @@ func get_input():
 		animated_sprite_2d.flip_h = true
 		dir = 0
 	if velocity.x != 0:
-		animated_sprite_2d.play("Walk_Run")
+		animated_sprite_2d.play("Run")
 	else:
 		animated_sprite_2d.play("default")
 
