@@ -2,7 +2,7 @@ extends CharacterBody2D
 var speedmax = 800
 @onready var speed = 800
 var airborne: bool = false
-var jumpv = -852
+var jumpv = -900
 @onready var inum = 0
 var inum_max = 50
 var jump:bool 
@@ -60,7 +60,8 @@ func get_input():
 	else:
 		animated_sprite_2d.play("default")
 	# Jumping animation
-
+	if jump:
+		animated_sprite_2d.play("Jump")
 		
 func _physics_process(delta):
 	

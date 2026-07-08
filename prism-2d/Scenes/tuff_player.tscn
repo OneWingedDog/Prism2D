@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://1n40uo005tr6"]
 
 [ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scenes/character_body_2d.gd" id="1_vmvto"]
+[ext_resource type="Texture2D" uid="uid://begub8v0q7r3y" path="res://Assets/Sprites/TEST WALK BLUE.png" id="2_lu8op"]
 [ext_resource type="Texture2D" uid="uid://rwfhsf7x52nn" path="res://Assets/Sprites/RUN TEMP-Sheet.png" id="2_myyqw"]
-[ext_resource type="Texture2D" uid="uid://fnx2vytiqsy1" path="res://Assets/Sprites/BlueC Jumpt.png" id="2_s41q2"]
 [ext_resource type="Texture2D" uid="uid://361tpd5cwg7o" path="res://Assets/Sprites/BlueC Idle-Sheet.png" id="2_vmvto"]
 [ext_resource type="Texture2D" uid="uid://cr5dblxm2iu5v" path="res://Assets/Sprites/BlueC WallCling.png" id="3_jx573"]
 [ext_resource type="Texture2D" uid="uid://demssmhrj0kuh" path="res://Assets/Sprites/BlueC Spawn.png" id="4_lu8op"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_up1om"]
-atlas = ExtResource("2_s41q2")
-region = Rect2(0, 0, 20, 36)
+atlas = ExtResource("2_lu8op")
+region = Rect2(17, 0, 17, 36)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2voj7"]
+load_path = "res://.godot/imported/BlueC Jumpt.png-25c0144c77de0c8671b99f61c54c1a04.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hcbw"]
-atlas = ExtResource("2_s41q2")
+atlas = SubResource("CompressedTexture2D_2voj7")
 region = Rect2(20, 0, 20, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_67frc"]
@@ -221,9 +224,9 @@ script = ExtResource("1_vmvto")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 scale = Vector2(10.544655, 10.544655)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Spawn"
+animation = &"Jump"
 autoplay = "default"
-frame_progress = 0.3044637
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 position = Vector2(-16.071447, -14.285731)
