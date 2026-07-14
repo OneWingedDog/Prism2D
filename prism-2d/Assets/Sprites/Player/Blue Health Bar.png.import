@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qjtsuhx0gajd"
-path="res://.godot/imported/Seatlle.png-f2dadcd52e81e8a6953363388bdf7c88.ctex"
+uid="uid://bgvrh25o28ny1"
+path="res://.godot/imported/Blue Health Bar.png-3f3e8571f560274aa043bdffea9295b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/Seatlle.png"
-dest_files=["res://.godot/imported/Seatlle.png-f2dadcd52e81e8a6953363388bdf7c88.ctex"]
+source_file="res://Assets/Sprites/Player/Blue Health Bar.png"
+dest_files=["res://.godot/imported/Blue Health Bar.png-3f3e8571f560274aa043bdffea9295b5.ctex"]
 
 [params]
 

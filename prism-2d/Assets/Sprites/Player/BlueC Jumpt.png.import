@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b14uehyeby4wd"
-path="res://.godot/imported/Seattle temp jump.png-9b3cf84dbf05bcdac01ba927156a4ea3.ctex"
+uid="uid://fnx2vytiqsy1"
+path="res://.godot/imported/BlueC Jumpt.png-6a6d3bc857e931b8cdca8212f7773740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/Seattle temp jump.png"
-dest_files=["res://.godot/imported/Seattle temp jump.png-9b3cf84dbf05bcdac01ba927156a4ea3.ctex"]
+source_file="res://Assets/Sprites/Player/BlueC Jumpt.png"
+dest_files=["res://.godot/imported/BlueC Jumpt.png-6a6d3bc857e931b8cdca8212f7773740.ctex"]
 
 [params]
 

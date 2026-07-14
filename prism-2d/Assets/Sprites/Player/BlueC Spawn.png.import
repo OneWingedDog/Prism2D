@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://361tpd5cwg7o"
-path="res://.godot/imported/BlueC Idle-Sheet.png-f97ecbaa9eee40b8edf9979c21843881.ctex"
+uid="uid://demssmhrj0kuh"
+path="res://.godot/imported/BlueC Spawn.png-afdb956a7a824f7204a7abca09e03a95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlueC Idle-Sheet.png"
-dest_files=["res://.godot/imported/BlueC Idle-Sheet.png-f97ecbaa9eee40b8edf9979c21843881.ctex"]
+source_file="res://Assets/Sprites/Player/BlueC Spawn.png"
+dest_files=["res://.godot/imported/BlueC Spawn.png-afdb956a7a824f7204a7abca09e03a95.ctex"]
 
 [params]
 

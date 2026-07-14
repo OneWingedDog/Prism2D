@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgvrh25o28ny1"
-path="res://.godot/imported/Blue Health Bar.png-6bc75c6ff380ff369f9dad364fcc12b0.ctex"
+uid="uid://cm4cuoek4bvip"
+path="res://.godot/imported/Cave Background Middle.png-99e8991d860d1028b938795850442ab8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Blue Health Bar.png"
-dest_files=["res://.godot/imported/Blue Health Bar.png-6bc75c6ff380ff369f9dad364fcc12b0.ctex"]
+source_file="res://Assets/Sprites/Levels/Cavee/Cave Background Middle.png"
+dest_files=["res://.godot/imported/Cave Background Middle.png-99e8991d860d1028b938795850442ab8.ctex"]
 
 [params]
 

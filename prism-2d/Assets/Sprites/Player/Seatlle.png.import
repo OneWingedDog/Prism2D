@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj6eoktoikjn7"
-path="res://.godot/imported/Cave Background Back.png-6e1763ae052014b69d595db657302b3f.ctex"
+uid="uid://qjtsuhx0gajd"
+path="res://.godot/imported/Seatlle.png-532f60773269e759b959334d946c9954.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cave Background Back.png"
-dest_files=["res://.godot/imported/Cave Background Back.png-6e1763ae052014b69d595db657302b3f.ctex"]
+source_file="res://Assets/Sprites/Player/Seatlle.png"
+dest_files=["res://.godot/imported/Seatlle.png-532f60773269e759b959334d946c9954.ctex"]
 
 [params]
 

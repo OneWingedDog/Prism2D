@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://begub8v0q7r3y"
-path="res://.godot/imported/TEST WALK BLUE.png-e815761f46a8b401ab825e220d3bb8cf.ctex"
+uid="uid://rwfhsf7x52nn"
+path="res://.godot/imported/RUN TEMP-Sheet.png-82cfd5a9210e0d8fb83d444f3073437a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/TEST WALK BLUE.png"
-dest_files=["res://.godot/imported/TEST WALK BLUE.png-e815761f46a8b401ab825e220d3bb8cf.ctex"]
+source_file="res://Assets/Sprites/Player/RUN TEMP-Sheet.png"
+dest_files=["res://.godot/imported/RUN TEMP-Sheet.png-82cfd5a9210e0d8fb83d444f3073437a.ctex"]
 
 [params]
 

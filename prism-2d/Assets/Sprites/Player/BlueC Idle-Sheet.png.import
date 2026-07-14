@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rwfhsf7x52nn"
-path="res://.godot/imported/RUN TEMP-Sheet.png-4ac929e3823312d7c44ec5c248375c18.ctex"
+uid="uid://361tpd5cwg7o"
+path="res://.godot/imported/BlueC Idle-Sheet.png-73cc82cdff6e87ffa18a9ebea77eeaf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/RUN TEMP-Sheet.png"
-dest_files=["res://.godot/imported/RUN TEMP-Sheet.png-4ac929e3823312d7c44ec5c248375c18.ctex"]
+source_file="res://Assets/Sprites/Player/BlueC Idle-Sheet.png"
+dest_files=["res://.godot/imported/BlueC Idle-Sheet.png-73cc82cdff6e87ffa18a9ebea77eeaf5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://demssmhrj0kuh"
-path="res://.godot/imported/BlueC Spawn.png-781258c73609872497a520ef3882272a.ctex"
+uid="uid://b8pqomddma23t"
+path="res://.godot/imported/SeatlleSHITESTt.png-346f98c4e6a044699f873b8ec5068f6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlueC Spawn.png"
-dest_files=["res://.godot/imported/BlueC Spawn.png-781258c73609872497a520ef3882272a.ctex"]
+source_file="res://Assets/Sprites/Player/SeatlleSHITESTt.png"
+dest_files=["res://.godot/imported/SeatlleSHITESTt.png-346f98c4e6a044699f873b8ec5068f6d.ctex"]
 
 [params]
 

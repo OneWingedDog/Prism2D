@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://1n40uo005tr6"]
 
-[ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scenes/character_body_2d.gd" id="1_vmvto"]
+[ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scripts/character_body_2d.gd" id="1_vmvto"]
 [ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="2_67frc"]
-[ext_resource type="Texture2D" uid="uid://b14uehyeby4wd" path="res://Shaders/Seattle temp jump.png" id="3_67frc"]
-[ext_resource type="Texture2D" uid="uid://d3x20n70upgrc" path="res://Shaders/Seattle Run Temp.png" id="4_20ycf"]
-[ext_resource type="Texture2D" uid="uid://4r7gbkdfdyq" path="res://Shaders/Seatlle Spawn.png" id="5_whtbs"]
-[ext_resource type="Texture2D" uid="uid://db7o6xhyoha7v" path="res://Shaders/Seattle Wallcling.png" id="6_ljs5u"]
-[ext_resource type="Texture2D" uid="uid://qjtsuhx0gajd" path="res://Shaders/Seatlle.png" id="7_20ycf"]
+[ext_resource type="Texture2D" uid="uid://b14uehyeby4wd" path="res://Assets/Sprites/Player/Seattle temp jump.png" id="3_67frc"]
+[ext_resource type="Texture2D" uid="uid://d3x20n70upgrc" path="res://Assets/Sprites/Player/Seattle Run Temp.png" id="4_20ycf"]
+[ext_resource type="Texture2D" uid="uid://4r7gbkdfdyq" path="res://Assets/Sprites/Player/Seatlle Spawn.png" id="5_whtbs"]
+[ext_resource type="Texture2D" uid="uid://db7o6xhyoha7v" path="res://Assets/Sprites/Player/Seattle Wallcling.png" id="6_ljs5u"]
+[ext_resource type="Texture2D" uid="uid://qjtsuhx0gajd" path="res://Assets/Sprites/Player/Seatlle.png" id="7_20ycf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_whtbs"]
 resource_local_to_scene = true
 shader = ExtResource("2_67frc")
 shader_parameter/main_color = Color(1, 1, 1, 1)
-shader_parameter/main_replace_color = Color(0.38039216, 0, 1, 1)
+shader_parameter/main_replace_color = Color(0.6666667, 0.8980392, 0.6431373, 1)
 shader_parameter/main_color_threshold = 0.0350000016625
 shader_parameter/accent_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
-shader_parameter/accent_replace_color = Color(0.7921569, 0.80784315, 0.24705882, 1)
+shader_parameter/accent_replace_color = Color(0, 0, 0, 1)
 shader_parameter/accent_color_threshold = 0.0570000027075
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq4x6"]
@@ -228,8 +228,8 @@ script = ExtResource("1_vmvto")
 material = SubResource("ShaderMaterial_whtbs")
 scale = Vector2(10.544655, 10.544655)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Wall Cling"
 autoplay = "default"
+frame_progress = 0.22795254
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 visible = false

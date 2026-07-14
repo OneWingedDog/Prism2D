@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr5dblxm2iu5v"
-path="res://.godot/imported/BlueC WallCling.png-8746451c8f97fe414999050b9eca8e35.ctex"
+uid="uid://b14uehyeby4wd"
+path="res://.godot/imported/Seattle temp jump.png-5882f19461d398b76d525238b175ddfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlueC WallCling.png"
-dest_files=["res://.godot/imported/BlueC WallCling.png-8746451c8f97fe414999050b9eca8e35.ctex"]
+source_file="res://Assets/Sprites/Player/Seattle temp jump.png"
+dest_files=["res://.godot/imported/Seattle temp jump.png-5882f19461d398b76d525238b175ddfd.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db7o6xhyoha7v"
-path="res://.godot/imported/Seattle Wallcling.png-3c3d40c318efe72df88802060bea73b0.ctex"
+uid="uid://d3x20n70upgrc"
+path="res://.godot/imported/Seattle Run Temp.png-c606e7173606c1c9a776761dda5e4270.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/Seattle Wallcling.png"
-dest_files=["res://.godot/imported/Seattle Wallcling.png-3c3d40c318efe72df88802060bea73b0.ctex"]
+source_file="res://Assets/Sprites/Player/Seattle Run Temp.png"
+dest_files=["res://.godot/imported/Seattle Run Temp.png-c606e7173606c1c9a776761dda5e4270.ctex"]
 
 [params]
 

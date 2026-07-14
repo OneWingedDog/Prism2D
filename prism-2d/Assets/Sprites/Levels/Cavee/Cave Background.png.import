@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4r7gbkdfdyq"
-path="res://.godot/imported/Seatlle Spawn.png-bf355f166f3f466b3398785b593622b2.ctex"
+uid="uid://crogrxrxpm87h"
+path="res://.godot/imported/Cave Background.png-2eff80105379fc2dff173738c5715909.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shaders/Seatlle Spawn.png"
-dest_files=["res://.godot/imported/Seatlle Spawn.png-bf355f166f3f466b3398785b593622b2.ctex"]
+source_file="res://Assets/Sprites/Levels/Cavee/Cave Background.png"
+dest_files=["res://.godot/imported/Cave Background.png-2eff80105379fc2dff173738c5715909.ctex"]
 
 [params]
 

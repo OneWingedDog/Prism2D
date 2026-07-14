@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fnx2vytiqsy1"
-path="res://.godot/imported/BlueC Jumpt.png-25c0144c77de0c8671b99f61c54c1a04.ctex"
+uid="uid://cr5dblxm2iu5v"
+path="res://.godot/imported/BlueC WallCling.png-619d4a945f5866fdd78af0bd9a42c9b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlueC Jumpt.png"
-dest_files=["res://.godot/imported/BlueC Jumpt.png-25c0144c77de0c8671b99f61c54c1a04.ctex"]
+source_file="res://Assets/Sprites/Player/BlueC WallCling.png"
+dest_files=["res://.godot/imported/BlueC WallCling.png-619d4a945f5866fdd78af0bd9a42c9b2.ctex"]
 
 [params]
 
