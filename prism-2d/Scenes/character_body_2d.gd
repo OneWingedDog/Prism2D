@@ -6,6 +6,9 @@
 # to figure out what most of the variables mean
 # -Idkxname
 
+# everybodys got a water buffalo
+# -onewingd
+
 extends CharacterBody2D
 var speedmax = 800
 @onready var speed = 800
