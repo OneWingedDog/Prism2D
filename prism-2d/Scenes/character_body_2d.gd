@@ -1,3 +1,11 @@
+# To anyone who is file ripping the game (I would be surprised if this 
+# got even a remotley small community)
+# This code is super unoptimised 
+# I barley even know how it works myself
+# you WILL need to read through all of the code multiple times 
+# to figure out what most of the variables mean
+# -Idkxname
+
 extends CharacterBody2D
 var speedmax = 800
 @onready var speed = 800
@@ -15,17 +23,17 @@ var touchingwall:bool
 var counteractingforce = 0
 var dir:int = 3
 var predir
-
-
+var is_right:bool = false
+var is_left:bool = false
 
 func get_input():
 	
 	if input_direction.x == (1.0) or (-1.0) :
 		oldinpt = input_direction
 	
-	counteractingforce = counteractingforce - 35
-	if counteractingforce < 50:
-		counteractingforce = 0
+	#counteractingforce = counteractingforce 
+	#if counteractingforce < 50:
+	#	counteractingforce = 0
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
 	
@@ -33,6 +41,24 @@ func get_input():
 	
 	
 	velocity.x = input_direction.x * (speed * incnum) + counteractingforce
+	
+	
+	if Input.is_action_just_pressed("Right"):
+		is_right = true
+	
+	if Input.is_action_just_released("Right"):
+		is_right = false
+	
+	if Input.is_action_just_pressed("Left"):
+		is_left = true
+	
+	if Input.is_action_just_released("Left"):
+		is_left = false
+	
+	
+	
+	
+	
 	
 	if Input.is_action_just_pressed("Jump") and jump == true:
 		walljump()
@@ -64,6 +90,17 @@ func get_input():
 		animated_sprite_2d.play("Jump")
 		
 func _physics_process(delta):
+	
+	print(counteractingforce)
+	print(velocity.x)
+	
+	if counteractingforce < 0 :
+		counteractingforce = counteractingforce + 100
+
+	if counteractingforce > 0 :
+		counteractingforce = counteractingforce - 100
+
+
 	
 	if touchingwall == true:
 		if velocity.y > 0:
@@ -112,4 +149,13 @@ func walljump():
 			predir = dir 
 			inum = 0
 			velocity.y = jumpv 
-			counteractingforce = -velocity.x * 2 
+			if dir == 1:
+				if is_right == true:
+					counteractingforce = -1600
+				else:
+					counteractingforce = -800
+			if dir == 0:
+				if is_left == true:
+					counteractingforce = 1600
+				else:
+					counteractingforce = 800
