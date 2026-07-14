@@ -645,7 +645,7 @@ scale = Vector2(0.561127, 0.5259366)
 texture = ExtResource("3_hiir6")
 
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]
-position = Vector2(5028, -2199)
+position = Vector2(30, -153)
 
 [node name="Label" type="Label" parent="." unique_id=1674358531]
 offset_left = -1173.0
