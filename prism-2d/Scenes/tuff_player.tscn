@@ -12,10 +12,10 @@
 resource_local_to_scene = true
 shader = ExtResource("2_67frc")
 shader_parameter/main_color = Color(1, 1, 1, 1)
-shader_parameter/main_replace_color = Color(0.6666667, 0.8980392, 0.6431373, 1)
+shader_parameter/main_replace_color = Color(0.9278077, 0.7874174, 0.7794727, 1)
 shader_parameter/main_color_threshold = 0.0350000016625
 shader_parameter/accent_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
-shader_parameter/accent_replace_color = Color(0, 0, 0, 1)
+shader_parameter/accent_replace_color = Color(1, 1, 1, 1)
 shader_parameter/accent_color_threshold = 0.0570000027075
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq4x6"]
