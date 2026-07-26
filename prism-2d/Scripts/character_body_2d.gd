@@ -29,6 +29,8 @@ var predir
 var is_right:bool = false
 var is_left:bool = false
 
+enum State {Idle, Walk, Attacking}
+
 func get_input():
 	
 	if input_direction.x == (1.0) or (-1.0) :
@@ -36,7 +38,7 @@ func get_input():
 	
 	#counteractingforce = counteractingforce 
 	#if counteractingforce < 50:
-	#	counteractingforce = 0
+	#counteractingforce = 0
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
 	
