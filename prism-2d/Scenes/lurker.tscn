@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://lxhifcski33"]
+
+[ext_resource type="Texture2D" uid="uid://bl8fj4ijl1wb1" path="res://Assets/Sprites/lurker walk.png" id="1_ajnqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsw8a"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(16, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp5px"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(32, 0, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll760"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(48, 0, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_dsw8a")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_cp5px")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ll760")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0eb53"]
+size = Vector2(13, 26)
+
+[node name="Lurker" type="Node2D" unique_id=1723957391]
+scale = Vector2(6.4603167, 6.4603167)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=102258911]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=537691076]
+sprite_frames = SubResource("SpriteFrames_0eb53")
+frame_progress = 0.21470109
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/AnimatedSprite2D" unique_id=405100304]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_0eb53")
