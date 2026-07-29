@@ -126,7 +126,7 @@ func _physics_process(delta):
 	inum = inum + 3
 	
 	if position.y > 12000:
-		global_position = Vector2(0,0)
+		global_position = Vector2(7786,-3182)
 	if inum > inum_max:
 		inum = inum_max
 	

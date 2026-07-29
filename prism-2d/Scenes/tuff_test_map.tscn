@@ -512,7 +512,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]
-position = Vector2(7786, -3183)
+position = Vector2(7786, -3182.55)
 
 [node name="Label" type="Label" parent="." unique_id=1674358531]
 offset_left = -1173.0
@@ -534,6 +534,21 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 7
 text = "Get a weapon here then a fight breaks out"
+label_settings = SubResource("LabelSettings_0eb53")
+
+[node name="Label3" type="Label" parent="." unique_id=1890625840]
+offset_left = -720.0
+offset_top = 12.0
+offset_right = -393.0
+offset_bottom = 35.0
+scale = Vector2(2.6, 2.6)
+tooltip_text = "rats"
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.7949494, 0.6915656, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+text = "He lurks?"
 label_settings = SubResource("LabelSettings_0eb53")
 
 [node name="Lurker" parent="." unique_id=1723957391 instance=ExtResource("8_jwcuc")]
