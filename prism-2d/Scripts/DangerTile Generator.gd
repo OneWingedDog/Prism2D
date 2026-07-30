@@ -15,7 +15,7 @@ func _ready() -> void:
 func start_timer():
 		add_child(timer)
 		timer.wait_time = frequency
-		timer.timeout.connect(_on_timer_timeout)		timer.start()
+		timer.start()
 
 # _on_timer_timeout():
 	#spawn_threat()

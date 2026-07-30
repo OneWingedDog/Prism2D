@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://bm8mpf7umfcbl"]
 
 [ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="1_55wsp"]
-[ext_resource type="Script" uid="uid://c0qn4ic002dll" path="res://Scenes/Action Tiles/Danger Tile.gd" id="1_e7qgu"]
 [ext_resource type="PackedScene" uid="uid://dm4x4hvtwcocq" path="res://Scenes/Tile Player.tscn" id="1_l6mau"]
 [ext_resource type="Texture2D" uid="uid://dy3w2tqulbejf" path="res://Shaders/canvas.png" id="1_q5l8q"]
 [ext_resource type="Texture2D" uid="uid://cy4xv1i0srcdi" path="res://Scenes/Tiles.png" id="2_q5l8q"]
@@ -174,7 +173,6 @@ shader_parameter/tint_strength = 0.3150000149625
 shader_parameter/viewport_size_override = Vector2(0, 0)
 
 [node name="TILE TEST MAP" type="Node" unique_id=1343697476]
-script = ExtResource("1_e7qgu")
 
 [node name="Canvas" type="Sprite2D" parent="." unique_id=1413379706]
 material = SubResource("ShaderMaterial_55wsp")
@@ -194,7 +192,7 @@ tile_set = SubResource("TileSet_vanes")
 
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=1813769013]
 position = Vector2(-96, -95)
-zoom = Vector2(1.55, 1.55)
+zoom = Vector2(1.635, 1.635)
 
 [node name="Tile Player" parent="." unique_id=696662938 instance=ExtResource("1_l6mau")]
 camera_on = false

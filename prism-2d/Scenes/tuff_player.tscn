@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d3x20n70upgrc" path="res://Assets/Sprites/Player/Seattle Run Temp.png" id="4_20ycf"]
 [ext_resource type="Texture2D" uid="uid://4r7gbkdfdyq" path="res://Assets/Sprites/Player/Seatlle Spawn.png" id="5_whtbs"]
 [ext_resource type="Texture2D" uid="uid://db7o6xhyoha7v" path="res://Assets/Sprites/Player/Seattle Wallcling.png" id="6_ljs5u"]
-[ext_resource type="Texture2D" uid="uid://qjtsuhx0gajd" path="res://Assets/Sprites/Player/Seatlle.png" id="7_20ycf"]
+[ext_resource type="Texture2D" uid="uid://cbffbrb5v621n" path="res://Assets/Sprites/Player/Cat looking guy sprite sheet INCOMPLETE.png" id="7_67frc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_whtbs"]
 resource_local_to_scene = true
@@ -21,13 +21,29 @@ shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/outline_replace_color = Color(0.5882353, 0, 1, 1)
 shader_parameter/outline_color_threshold = 0.10000000475
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_20ycf"]
+atlas = ExtResource("7_67frc")
+region = Rect2(36, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whtbs"]
+atlas = ExtResource("7_67frc")
+region = Rect2(108, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljs5u"]
+atlas = ExtResource("7_67frc")
+region = Rect2(72, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up1om"]
+atlas = ExtResource("7_67frc")
+region = Rect2(0, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qcwe"]
+atlas = ExtResource("7_67frc")
+region = Rect2(144, 0, 36, 72)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq4x6"]
 atlas = ExtResource("3_67frc")
 region = Rect2(0, 0, 20, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_up1om"]
-atlas = ExtResource("3_67frc")
-region = Rect2(20, 0, 20, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_67frc"]
 atlas = ExtResource("3_67frc")
@@ -101,30 +117,51 @@ region = Rect2(160, 0, 16, 36)
 atlas = ExtResource("5_whtbs")
 region = Rect2(176, 0, 16, 36)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5qcwe"]
-atlas = ExtResource("7_20ycf")
-region = Rect2(0, 0, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2voj7"]
-atlas = ExtResource("7_20ycf")
-region = Rect2(16, 0, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3kkei"]
-atlas = ExtResource("7_20ycf")
-region = Rect2(32, 0, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wg38u"]
-atlas = ExtResource("7_20ycf")
-region = Rect2(48, 0, 16, 36)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qq4x6")
+"texture": SubResource("AtlasTexture_20ycf")
+}],
+"loop": 1,
+"name": &"Idle - No Weapon",
+"speed": 10.0
 }, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whtbs")
+}],
+"loop": 1,
+"name": &"Idle Diagonal - Weapon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljs5u")
+}],
+"loop": 1,
+"name": &"Idle Down - Weapon",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_up1om")
+}],
+"loop": 1,
+"name": &"Idle Side - Weapon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qcwe")
+}],
+"loop": 1,
+"name": &"Idle Up - Weapon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq4x6")
 }],
 "loop": 1,
 "name": &"Jump",
@@ -206,23 +243,6 @@ animations = [{
 "loop": 1,
 "name": &"Wall Cling",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 2.5,
-"texture": SubResource("AtlasTexture_5qcwe")
-}, {
-"duration": 2.5,
-"texture": SubResource("AtlasTexture_2voj7")
-}, {
-"duration": 2.5,
-"texture": SubResource("AtlasTexture_3kkei")
-}, {
-"duration": 2.5,
-"texture": SubResource("AtlasTexture_wg38u")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkrn0"]
@@ -241,10 +261,10 @@ script = ExtResource("1_vmvto")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 material = SubResource("ShaderMaterial_whtbs")
-scale = Vector2(7, 7)
+scale = Vector2(3.5714326, 3.571433)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Punch"
-autoplay = "default"
+animation = &"Idle Down - Weapon"
+autoplay = "Idle - No Weapon"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 position = Vector2(-5.357151, 0)

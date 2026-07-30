@@ -553,3 +553,4 @@ position = Vector2(-590, -93)
 
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]
 position = Vector2(-1003, -153)
+scale = Vector2(0.99999934, 0.99999934)
