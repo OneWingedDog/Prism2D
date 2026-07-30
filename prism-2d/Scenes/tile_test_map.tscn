@@ -1,9 +1,24 @@
 [gd_scene format=4 uid="uid://bm8mpf7umfcbl"]
 
+[ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="1_55wsp"]
+[ext_resource type="Script" uid="uid://c0qn4ic002dll" path="res://Scenes/Action Tiles/Danger Tile.gd" id="1_e7qgu"]
 [ext_resource type="PackedScene" uid="uid://dm4x4hvtwcocq" path="res://Scenes/Tile Player.tscn" id="1_l6mau"]
 [ext_resource type="Texture2D" uid="uid://dy3w2tqulbejf" path="res://Shaders/canvas.png" id="1_q5l8q"]
 [ext_resource type="Texture2D" uid="uid://cy4xv1i0srcdi" path="res://Scenes/Tiles.png" id="2_q5l8q"]
 [ext_resource type="Shader" uid="uid://ba576y8wwoum7" path="res://Shaders/CRT Shader.gdshader" id="3_g3qnc"]
+[ext_resource type="PackedScene" uid="uid://b2n2wgdpvmuxp" path="res://Scenes/Action Tiles/danger_tile.tscn" id="6_7w172"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_55wsp"]
+shader = ExtResource("1_55wsp")
+shader_parameter/main_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
+shader_parameter/main_replace_color = Color(1, 1, 1, 1)
+shader_parameter/main_color_threshold = 0.1870000088825
+shader_parameter/accent_color = Color(0, 0, 0, 1)
+shader_parameter/accent_replace_color = Color(0, 0, 0, 1)
+shader_parameter/accent_color_threshold = 0.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_replace_color = Color(0, 0, 0, 1)
+shader_parameter/outline_color_threshold = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0nms"]
 texture = ExtResource("2_q5l8q")
@@ -45,7 +60,6 @@ texture_region_size = Vector2i(64, 64)
 11:2/0 = 0
 1:2/0 = 0
 12:0/0 = 0
-12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 11:3/0 = 0
 10:3/0 = 0
 9:3/0 = 0
@@ -61,8 +75,86 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_0eb53"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_g0nms")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5l8q"]
+texture = ExtResource("2_q5l8q")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+13:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+10:3/0 = 0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+12:3/0 = 0
+13:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vanes"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_q5l8q")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g3qnc"]
 shader = ExtResource("3_g3qnc")
@@ -82,18 +174,30 @@ shader_parameter/tint_strength = 0.3150000149625
 shader_parameter/viewport_size_override = Vector2(0, 0)
 
 [node name="TILE TEST MAP" type="Node" unique_id=1343697476]
+script = ExtResource("1_e7qgu")
 
 [node name="Canvas" type="Sprite2D" parent="." unique_id=1413379706]
+material = SubResource("ShaderMaterial_55wsp")
 position = Vector2(-55, -67)
 scale = Vector2(2.2314453, 2.2314453)
 texture = ExtResource("1_q5l8q")
 
 [node name="Tiles3" type="TileMapLayer" parent="." unique_id=1574541730]
 position = Vector2(32, 32)
-tile_map_data = PackedByteArray("AAD/////AAAHAAEAAAD4//7/AAAAAAAAAAD4////AAAAAAEAAAD4/wAAAAAAAAIAAAD5//7/AAABAAAAAAD5////AAABAAEAAAD5/wAAAAABAAIAAAD6//7/AAACAAAAAAD6/wAAAAACAAIAAAD7//7/AAADAAAAAAD7////AAAMAAAAAAD7/wAAAAADAAIAAAD8//7/AAAEAAAAAAD8////AAAEAAEAAAD8/wAAAAAEAAIAAAD9//7/AAAFAAAAAAD9////AAAFAAEAAAD9/wAAAAAFAAIAAAD+//7/AAAGAAAAAAD+////AAAGAAEAAAD+/wAAAAAGAAIAAAD///7/AAAHAAAAAAD//wAAAAAHAAIAAAAAAP7/AAAIAAAAAAAAAP//AAAMAAAAAAAAAAAAAAAIAAIAAAABAP7/AAAJAAAAAAABAP//AAAJAAEAAAABAAAAAAAJAAIAAAACAP7/AAAKAAAAAAACAP//AAAKAAEAAAACAAAAAAAKAAIAAAADAP7/AAALAAAAAAADAP//AAALAAEAAAADAAAAAAALAAIAAAD9//v/AAAGAAAAABD9//z/AAAGAAEAABD9//3/AAAGAAIAABD+//v/AAAFAAAAABD+//z/AAAFAAEAABD+//3/AAAMAAAAAAD///v/AAAEAAAAABD///z/AAAMAAAAAAD///3/AAAEAAIAABAAAPv/AAADAAAAABAAAPz/AAAMAAAAAAAAAP3/AAAMAAAAAAD4//3/AAALAAIAABD5//3/AAAKAAIAABD6//3/AAAJAAIAABD7//3/AAAIAAIAABD8//3/AAAHAAIAABABAP3/AAAMAAAAAAACAP3/AAAMAAAAAAADAP3/AAAMAAAAAAD4//z/AAALAAEAABD5//z/AAAKAAEAABD6//z/AAAJAAEAABD7//z/AAAIAAEAABD8//z/AAAHAAEAABABAPz/AAACAAEAABACAPz/AAABAAEAABADAPz/AAAAAAEAABD4//v/AAALAAAAABD5//v/AAAKAAAAABD6//v/AAAMAAAAAAD7//v/AAAIAAAAABD8//v/AAAHAAAAABABAPv/AAACAAAAABACAPv/AAABAAAAABADAPv/AAAAAAAAABD6////AAACAAEAAAD5/wEAAAAMAAAAAAD7/wEAAAAMAAAAAAD9/wEAAAAMAAAAAAD//wEAAAAMAAAAAAABAAEAAAAMAAAAAAADAAEAAAAMAAAAAAD4/wEAAAAMAAAAAAD6/wEAAAAMAAAAAAD8/wEAAAAMAAAAAAD+/wEAAAAMAAAAAAAAAAEAAAAMAAAAAAACAAEAAAAMAAAAAAAEAPv/AAAMAAAAAAAEAPz/AAAMAAAAAAAEAP3/AAAMAAAAAAAEAP7/AAAMAAAAAAAEAP//AAAMAAAAAAAEAAAAAAAMAAAAAAAEAAEAAAAMAAAAAAD3/wEAAAAMAAAAAAD3/wAAAAAMAAAAAAD3////AAAMAAAAAAD3//7/AAAMAAAAAAD3//3/AAAMAAAAAAD3//z/AAAMAAAAAAD3//v/AAAMAAAAAAD3//r/AAAMAAAAADD4//r/AAAMAAAAADD5//r/AAAMAAAAADD6//r/AAAMAAAAADD7//r/AAAMAAAAADD8//r/AAAMAAAAADD9//r/AAAMAAAAADD+//r/AAAMAAAAADD///r/AAAMAAAAADAAAPr/AAAMAAAAADABAPr/AAAMAAAAADACAPr/AAAMAAAAADADAPr/AAAMAAAAADAEAPr/AAAMAAAAADA=")
+tile_map_data = PackedByteArray("AAD/////AAAHAAEAAAD4//7/AAAAAAAAAAD4////AAAAAAEAAAD4/wAAAAAAAAIAAAD5//7/AAALAAMAAAD5////AAABAAEAAAD5/wAAAAABAAIAAAD6//7/AAACAAAAAAD6/wAAAAACAAIAAAD7//7/AAADAAAAAAD7////AAADAAEAAAD7/wAAAAADAAIAAAD8//7/AAAEAAAAAAD8////AAAEAAEAAAD8/wAAAAAEAAIAAAD9//7/AAAFAAAAAAD9////AAAFAAEAAAD9/wAAAAAFAAIAAAD+//7/AAAGAAAAAAD+////AAAHAAMAAAD+/wAAAAAGAAIAAAD///7/AAAHAAAAAAD//wAAAAAHAAIAAAAAAP7/AAAIAAAAAAAAAP//AAAGAAEAAAAAAAAAAAAIAAIAAAABAP7/AAADAAMAAAABAP//AAAJAAEAAAABAAAAAAAJAAIAAAACAP7/AAAKAAAAAAACAP//AAAKAAEAAAACAAAAAAAKAAIAAAADAP7/AAALAAAAAAADAP//AAALAAEAAAADAAAAAAALAAIAAAD9//v/AAAGAAAAABD9//z/AAAGAAEAABD+//v/AAAFAAAAABD+//z/AAAFAAEAABD///v/AAAEAAAAABD///z/AAACAAEAAAD///3/AAAEAAIAABAAAPv/AAADAAAAABAAAPz/AAADAAEAAAAAAP3/AAACAAEAAAD4//3/AAALAAIAABD5//3/AAAKAAIAABD6//3/AAAJAAIAABD7//3/AAAIAAIAABD8//3/AAAHAAIAABABAP3/AAADAAEAAAACAP3/AAACAAEAAAADAP3/AAAAAAIAAAD4//z/AAAKAAMAAAD5//z/AAAKAAEAABD6//z/AAAJAAEAABD7//z/AAAJAAMAAAD8//z/AAAHAAEAABABAPz/AAACAAEAABACAPz/AAABAAEAABADAPz/AAAAAAEAABD4//v/AAALAAAAABD5//v/AAAKAAAAABD6//v/AAACAAEAAAD7//v/AAAIAAAAABD8//v/AAAHAAAAABABAPv/AAACAAAAABADAPv/AAAAAAAAABD6////AAACAAEAAAD+//3/AAAFAAMAABD9//3/AAAGAAMAABA=")
 tile_set = SubResource("TileSet_0eb53")
 
+[node name="Collision Tiles and edges" type="TileMapLayer" parent="." unique_id=1841381572]
+position = Vector2(32, 32)
+tile_map_data = PackedByteArray("AAD3//r/AAAMAAEAAAD3//v/AAAMAAEAAAD3//z/AAAMAAEAAAD3//3/AAAMAAEAAAD3//7/AAAMAAEAAAD3////AAAMAAEAAAD3/wAAAAAMAAEAAAD3/wEAAAAMAAEAAAD4//r/AAAMAAEAAAD4/wEAAAAMAAEAAAD5//r/AAAMAAEAAAD5//z/AAAMAAAAAAD5////AAAMAAAAAAD5/wEAAAAMAAEAAAD6//r/AAAMAAEAAAD6/wEAAAAMAAEAAAD7//r/AAAMAAEAAAD7/wEAAAAMAAEAAAD8//r/AAAMAAEAAAD8//7/AAAMAAAAAAD8/wEAAAAMAAEAAAD9//r/AAAMAAEAAAD9/wEAAAAMAAEAAAD+//r/AAAMAAEAAAD+/wEAAAAMAAEAAAD///r/AAAMAAEAAAD//wEAAAAMAAEAAAAAAPr/AAAMAAEAAAAAAAEAAAAMAAEAAAABAPr/AAAMAAEAAAABAP//AAAMAAAAAAABAAEAAAAMAAEAAAACAPr/AAAMAAEAAAACAPz/AAAMAAAAAAACAP//AAAMAAAAAAACAAEAAAAMAAEAAAADAPr/AAAMAAEAAAADAAEAAAAMAAEAAAAEAPr/AAAMAAEAAAAEAPv/AAAMAAEAAAAEAPz/AAAMAAEAAAAEAP3/AAAMAAEAAAAEAP7/AAAMAAEAAAAEAP//AAAMAAEAAAAEAAAAAAAMAAEAAAAEAAEAAAAMAAEAAAD5//7/AAALAAMAAAABAP7/AAADAAMAAAD+//3/AAAFAAMAAAD9//3/AAAGAAMAAAD4//z/AAAGAAMAAAD7//z/AAAJAAMAAAD+////AAAHAAMAAAACAPv/AAAMAAEAAAA=")
+tile_set = SubResource("TileSet_vanes")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1813769013]
+position = Vector2(-96, -95)
+zoom = Vector2(1.55, 1.55)
+
 [node name="Tile Player" parent="." unique_id=696662938 instance=ExtResource("1_l6mau")]
+camera_on = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1541221135]
 visible = false
@@ -106,3 +210,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Danger Tile" parent="." unique_id=512570825 instance=ExtResource("6_7w172")]
+position = Vector2(-64, -64)
