@@ -230,7 +230,7 @@ radius = 64.2858
 height = 391.0009
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxols"]
-radius = 108.9287
+radius = 91.83685
 height = 439.28622
 
 [node name="Tuff player" type="Node2D" unique_id=1752257990]
@@ -241,14 +241,14 @@ script = ExtResource("1_vmvto")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 material = SubResource("ShaderMaterial_whtbs")
-scale = Vector2(10.544655, 10.544655)
+scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_0eb53")
 animation = &"Punch"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
-visible = false
-position = Vector2(-16.071447, -14.285731)
+position = Vector2(-5.357151, 0)
+scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_mkrn0")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=395622131]
@@ -258,8 +258,8 @@ zoom = Vector2(0.6, 0.6)
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=244824990]
-visible = false
-position = Vector2(-3.5714328, 1.7857164)
+position = Vector2(-1.7857208, 1.9073486e-06)
+scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_dxols")
 
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
