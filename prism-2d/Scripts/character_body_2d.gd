@@ -96,7 +96,7 @@ func get_input():
 		
 func _physics_process(delta):
 	
-	print(touchingwall)
+	print(jump)
 
 	
 	if counteractingforce < 0 :
@@ -116,11 +116,8 @@ func _physics_process(delta):
 	else:
 		incnum = 1
 	
-	if velocity.y == 0:
-		predir = 3
-		dir = 3
-		jump = false
-		touchingwall = false
+
+
 	
 	
 	inum = inum + 3
@@ -168,3 +165,10 @@ func walljump():
 
 func _on_area_2d_2_body_exited(body: Node2D) -> void:
 	jump = true
+
+
+func _on_area_2d_2_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+		predir = 3
+		dir = 3
+		jump = false
+		touchingwall = false
