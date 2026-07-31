@@ -164,3 +164,7 @@ func walljump():
 					counteractingforce = 1600
 				else:
 					counteractingforce = 800
+
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	jump = true

@@ -8,6 +8,7 @@
 [ext_resource type="Shader" uid="uid://ba576y8wwoum7" path="res://Shaders/CRT Shader.gdshader" id="6_4xpso"]
 [ext_resource type="Texture2D" uid="uid://dnbhfpk55svwm" path="res://Assets/Sprites/Forest BG RealMid.png" id="6_jwcuc"]
 [ext_resource type="PackedScene" uid="uid://lxhifcski33" path="res://Scenes/lurker.tscn" id="8_jwcuc"]
+[ext_resource type="Texture2D" uid="uid://cejvkfvhicn66" path="res://Assets/Sprites/Screenshot 2026-07-30 212409.png" id="9_ckamh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckamh"]
 texture = ExtResource("5_jwcuc")
@@ -554,3 +555,8 @@ position = Vector2(-590, -93)
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]
 position = Vector2(-1003, -153)
 scale = Vector2(0.99999934, 0.99999934)
+
+[node name="Screenshot20260730212409" type="Sprite2D" parent="." unique_id=2007918606]
+position = Vector2(12182, -1385.0001)
+scale = Vector2(0.5732484, 0.63968253)
+texture = ExtResource("9_ckamh")

@@ -246,12 +246,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkrn0"]
-radius = 64.2858
-height = 391.0009
+radius = 33.163307
+height = 209.18393
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxols"]
-radius = 91.83685
-height = 439.28622
+radius = 61.224567
+height = 204.08188
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
+size = Vector2(26.78575, 20)
 
 [node name="Tuff player" type="Node2D" unique_id=1752257990]
 scale = Vector2(0.55999935, 0.55999935)
@@ -263,11 +266,11 @@ script = ExtResource("1_vmvto")
 material = SubResource("ShaderMaterial_whtbs")
 scale = Vector2(3.5714326, 3.571433)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Idle Down - Weapon"
+animation = &"Wall Cling"
 autoplay = "Idle - No Weapon"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
-position = Vector2(-5.357151, 0)
+position = Vector2(-1.785718, -9.536743e-07)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_mkrn0")
 
@@ -278,9 +281,17 @@ zoom = Vector2(0.6, 0.6)
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=244824990]
-position = Vector2(-1.7857208, 1.9073486e-06)
+position = Vector2(-1.7857132, 0)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_dxols")
 
+[node name="Area2D2" type="Area2D" parent="CharacterBody2D" unique_id=1946334934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D2" unique_id=1054390232]
+position = Vector2(-12.500014, 55.357212)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_dxols")
+
 [connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="CharacterBody2D/Area2D2" to="CharacterBody2D" method="_on_area_2d_2_body_exited"]
