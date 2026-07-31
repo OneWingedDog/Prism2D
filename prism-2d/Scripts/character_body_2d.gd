@@ -96,8 +96,8 @@ func get_input():
 		
 func _physics_process(delta):
 	
-	print(counteractingforce)
-	print(velocity.x)
+	print(touchingwall)
+
 	
 	if counteractingforce < 0 :
 		counteractingforce = counteractingforce + 100

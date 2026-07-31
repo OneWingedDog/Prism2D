@@ -250,8 +250,8 @@ radius = 33.163307
 height = 209.18393
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxols"]
-radius = 61.224567
-height = 204.08188
+radius = 53.571495
+height = 132.65321
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
 size = Vector2(26.78575, 20)
@@ -281,7 +281,7 @@ zoom = Vector2(0.6, 0.6)
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=244824990]
-position = Vector2(-1.7857132, 0)
+position = Vector2(-1.7857165, 21.428596)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_dxols")
 
