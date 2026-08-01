@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scripts/character_body_2d.gd" id="1_vmvto"]
 [ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="2_67frc"]
 [ext_resource type="Texture2D" uid="uid://b14uehyeby4wd" path="res://Assets/Sprites/Player/Seattle temp jump.png" id="3_67frc"]
-[ext_resource type="Texture2D" uid="uid://d3x20n70upgrc" path="res://Assets/Sprites/Player/Seattle Run Temp.png" id="4_20ycf"]
 [ext_resource type="Texture2D" uid="uid://4r7gbkdfdyq" path="res://Assets/Sprites/Player/Seatlle Spawn.png" id="5_whtbs"]
+[ext_resource type="Texture2D" uid="uid://c3jddmitjxmey" path="res://Assets/Sprites/Player/Aiming Right Walk.png" id="6_67frc"]
 [ext_resource type="Texture2D" uid="uid://db7o6xhyoha7v" path="res://Assets/Sprites/Player/Seattle Wallcling.png" id="6_ljs5u"]
 [ext_resource type="Texture2D" uid="uid://cbffbrb5v621n" path="res://Assets/Sprites/Player/Cat looking guy sprite sheet INCOMPLETE.png" id="7_67frc"]
 
@@ -12,13 +12,13 @@
 resource_local_to_scene = true
 shader = ExtResource("2_67frc")
 shader_parameter/main_color = Color(1, 1, 1, 1)
-shader_parameter/main_replace_color = Color(0, 0, 0, 1)
+shader_parameter/main_replace_color = Color(1, 0, 0, 1)
 shader_parameter/main_color_threshold = 0.10000000475
 shader_parameter/accent_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
-shader_parameter/accent_replace_color = Color(1, 1, 1, 1)
+shader_parameter/accent_replace_color = Color(0.9999997, 0.9129128, 0.9137997, 1)
 shader_parameter/accent_color_threshold = 0.10000000475
 shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/outline_replace_color = Color(0.5882353, 0, 1, 1)
+shader_parameter/outline_replace_color = Color(0, 0, 0, 1)
 shader_parameter/outline_color_threshold = 0.10000000475
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20ycf"]
@@ -48,26 +48,6 @@ region = Rect2(0, 0, 20, 36)
 [sub_resource type="AtlasTexture" id="AtlasTexture_67frc"]
 atlas = ExtResource("3_67frc")
 region = Rect2(20, 0, 20, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6hcbw"]
-atlas = ExtResource("4_20ycf")
-region = Rect2(0, 0, 26, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4bkvb"]
-atlas = ExtResource("4_20ycf")
-region = Rect2(26, 0, 26, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6oooe"]
-atlas = ExtResource("4_20ycf")
-region = Rect2(52, 0, 26, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_76fdi"]
-atlas = ExtResource("4_20ycf")
-region = Rect2(78, 0, 26, 45)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_idcjv"]
-atlas = ExtResource("4_20ycf")
-region = Rect2(104, 0, 26, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o1ewd"]
 atlas = ExtResource("5_whtbs")
@@ -116,6 +96,30 @@ region = Rect2(160, 0, 16, 36)
 [sub_resource type="AtlasTexture" id="AtlasTexture_gobsq"]
 atlas = ExtResource("5_whtbs")
 region = Rect2(176, 0, 16, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hcbw"]
+atlas = ExtResource("6_67frc")
+region = Rect2(0, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bkvb"]
+atlas = ExtResource("6_67frc")
+region = Rect2(36, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oooe"]
+atlas = ExtResource("6_67frc")
+region = Rect2(72, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76fdi"]
+atlas = ExtResource("6_67frc")
+region = Rect2(108, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idcjv"]
+atlas = ExtResource("6_67frc")
+region = Rect2(144, 0, 36, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2voj7"]
+atlas = ExtResource("6_67frc")
+region = Rect2(180, 0, 36, 72)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
@@ -177,26 +181,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6hcbw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4bkvb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6oooe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_76fdi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_idcjv")
-}],
-"loop": 1,
-"name": &"Run",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_o1ewd")
 }, {
 "duration": 1.0,
@@ -238,6 +222,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_6hcbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bkvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oooe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76fdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idcjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2voj7")
+}],
+"loop": 1,
+"name": &"Walk Aiming Right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_ljs5u")
 }],
 "loop": 1,
@@ -264,10 +271,11 @@ script = ExtResource("1_vmvto")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 material = SubResource("ShaderMaterial_whtbs")
-scale = Vector2(3.5714326, 3.571433)
+scale = Vector2(2.6785748, 2.6785753)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Wall Cling"
+animation = &"Walk Aiming Right"
 autoplay = "Idle - No Weapon"
+frame_progress = 0.035460655
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 position = Vector2(-1.785718, -9.536743e-07)

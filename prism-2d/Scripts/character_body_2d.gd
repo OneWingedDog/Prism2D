@@ -87,9 +87,9 @@ func get_input():
 		animated_sprite_2d.flip_h = true
 		dir = 0
 	if velocity.x != 0:
-		animated_sprite_2d.play("Run")
+		animated_sprite_2d.play("Walk Aiming Right")
 	else:
-		animated_sprite_2d.play("default")
+		animated_sprite_2d.play("Idle - No Weapon")
 	# Jumping animation
 	if jump:
 		animated_sprite_2d.play("Jump")
