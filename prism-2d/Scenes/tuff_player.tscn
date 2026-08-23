@@ -250,10 +250,8 @@ shape = SubResource("CapsuleShape2D_mkrn0")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=395622131]
 scale = Vector2(3.9600003, 1)
 zoom = Vector2(0.6, 0.6)
-position_smoothing_enabled = true
+limit_enabled = false
 position_smoothing_speed = 8.0
-drag_vertical_enabled = true
-drag_vertical_offset = -0.5
 
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
 
