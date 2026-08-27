@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scripts/character_body_2d.gd" id="1_vmvto"]
 [ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="2_67frc"]
-[ext_resource type="Texture2D" uid="uid://qjtsuhx0gajd" path="res://Assets/Sprites/Player/Seatlle.png" id="3_20ycf"]
+[ext_resource type="Texture2D" uid="uid://5n8l30sd7pl5" path="res://Assets/Sprites/Player/idle.png" id="3_20ycf"]
 [ext_resource type="Texture2D" uid="uid://b14uehyeby4wd" path="res://Assets/Sprites/Player/Seattle temp jump.png" id="3_67frc"]
 [ext_resource type="Texture2D" uid="uid://4r7gbkdfdyq" path="res://Assets/Sprites/Player/Seatlle Spawn.png" id="5_whtbs"]
-[ext_resource type="Texture2D" uid="uid://b8b3fandwaerv" path="res://Assets/Sprites/Player/another test Sheet.png" id="6_67frc"]
+[ext_resource type="Texture2D" uid="uid://bt65pthej6fjx" path="res://Assets/Sprites/Player/Walk sheet try 1.png" id="6_67frc"]
 [ext_resource type="Texture2D" uid="uid://db7o6xhyoha7v" path="res://Assets/Sprites/Player/Seattle Wallcling.png" id="6_ljs5u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_whtbs"]
@@ -17,29 +17,21 @@ shader_parameter/main_color_threshold = 0.10000000475
 shader_parameter/accent_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
 shader_parameter/accent_replace_color = Color(0.9238923, 0.96362907, 0.75673, 1)
 shader_parameter/accent_color_threshold = 0.10000000475
-shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 shader_parameter/outline_replace_color = Color(0, 0, 0, 1)
 shader_parameter/outline_color_threshold = 0.10000000475
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_whtbs"]
 atlas = ExtResource("3_20ycf")
-region = Rect2(0, 0, 16, 36)
+region = Rect2(0, 0, 42, 87)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ljs5u"]
 atlas = ExtResource("3_20ycf")
-region = Rect2(16, 0, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_up1om"]
-atlas = ExtResource("3_20ycf")
-region = Rect2(32, 0, 16, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6hcbw"]
-atlas = ExtResource("3_20ycf")
-region = Rect2(48, 0, 16, 36)
+region = Rect2(42, 0, 42, 87)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq4x6"]
-atlas = ExtResource("3_67frc")
-region = Rect2(0, 0, 20, 36)
+atlas = ExtResource("6_67frc")
+region = Rect2(0, 0, 51, 87)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_67frc"]
 atlas = ExtResource("3_67frc")
@@ -95,50 +87,28 @@ region = Rect2(176, 0, 16, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20ycf"]
 atlas = ExtResource("6_67frc")
-region = Rect2(0, 0, 40, 79)
+region = Rect2(51, 0, 51, 87)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4bkvb"]
 atlas = ExtResource("6_67frc")
-region = Rect2(40, 0, 40, 79)
+region = Rect2(102, 0, 51, 87)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oooe"]
+atlas = ExtResource("6_67frc")
+region = Rect2(153, 0, 51, 87)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 42.0,
 "texture": SubResource("AtlasTexture_whtbs")
 }, {
-"duration": 3.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ljs5u")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_up1om")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_6hcbw")
 }],
 "loop": 1,
-"name": &"Idle - No Weapon",
+"name": &"Idle",
 "speed": 10.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"Idle Diagonal - Weapon",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"Idle Down - Weapon",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"Idle Side - Weapon",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"Idle Up - Weapon",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -198,14 +168,17 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
-"duration": 4.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_20ycf")
 }, {
-"duration": 4.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_4bkvb")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_6oooe")
 }],
 "loop": 1,
-"name": &"Walk Aiming Right",
+"name": &"Walking",
 "speed": 10.0
 }, {
 "frames": [{
@@ -219,7 +192,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkrn0"]
 radius = 33.163307
-height = 209.18393
+height = 204.08188
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxols"]
 radius = 53.571495
@@ -228,19 +201,18 @@ height = 132.65321
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxols"]
 size = Vector2(26.78575, 20)
 
-[node name="Tuff player" type="Node2D" unique_id=1752257990]
+[node name="Tuff player" type="Node2D" unique_id=1752257990 groups=["Player"]]
 scale = Vector2(0.55999935, 0.55999935)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=234204907]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=234204907 groups=["Player"]]
 script = ExtResource("1_vmvto")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1564634359]
 material = SubResource("ShaderMaterial_whtbs")
-scale = Vector2(1.8750024, 1.8750024)
+scale = Vector2(1.6156482, 1.6156483)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"Walk Aiming Right"
-autoplay = "Idle - No Weapon"
-frame_progress = 0.37295565
+animation = &"Walking"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=961077790]
 position = Vector2(-1.785718, -9.536743e-07)
