@@ -12,17 +12,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		can_interact = true
 		print("inside npc ",)
 
-func _process(delta: float) -> void:
-	if can_interact and Input.is_action_just_pressed("Shift"):
-		Dialogic.start('junk_shopkeeper')
-		get_viewport().set_input_as_handled()
 
 func _on_timer_timeout() -> void:
-	if animated_sprite_2d.animation == "idle" and Dialogic.current_timeline != null:
+	if animated_sprite_2d.animation != "fall asleep":
 		animated_sprite_2d.play("fall asleep")
+		pass
 	elif animated_sprite_2d.animation == "fall asleep":
 		animated_sprite_2d.play("wake up!!")
-	elif animated_sprite_2d.animation == "wake up!!":
 		await animated_sprite_2d.animation_finished
 		timer.start()
 		animated_sprite_2d.play("idle")

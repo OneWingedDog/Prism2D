@@ -62,9 +62,6 @@ func get_input():
 	
 	
 	
-	
-	
-	
 	if Input.is_action_just_pressed("Jump") and jump == true:
 		walljump()
 	
@@ -91,9 +88,11 @@ func get_input():
 	else:
 		animated_sprite_2d.play("Idle")
 	# Jumping animation
-	if jump:
-		animated_sprite_2d.play("Jump")
-		
+	if velocity.y >= terminal_velocity:
+		var fallinghard = true
+		if fallinghard and animated_sprite_2d.animation != "falling":
+			animated_sprite_2d.play_backwards("falling")
+			
 func _physics_process(delta):
 	
 	#print(jump)

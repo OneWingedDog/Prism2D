@@ -8,8 +8,14 @@
 [node name="Node" type="Node" unique_id=1099912750]
 script = ExtResource("1_hlgxo")
 
-[node name="PrismLogo" type="Sprite2D" parent="." unique_id=570830260]
-position = Vector2(623, 135)
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=736587416]
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer2" unique_id=211462306]
+offset_right = 298.0
+offset_bottom = 607.0
+
+[node name="PrismLogo" type="Sprite2D" parent="CanvasLayer2" unique_id=570830260]
+position = Vector2(640, 122)
 texture = ExtResource("2_slhv3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1378351381]

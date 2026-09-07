@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8b3fandwaerv"
-path="res://.godot/imported/another test Sheet.png-7124514fa3405826088619a00737308a.ctex"
+uid="uid://b7gq0qm1sf1qa"
+path="res://.godot/imported/skateboard text.png-b31fa6a1c1d636ab12d3532c48f7798c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player/another test Sheet.png"
-dest_files=["res://.godot/imported/another test Sheet.png-7124514fa3405826088619a00737308a.ctex"]
+source_file="res://Assets/Sprites/Player/skateboard text.png"
+dest_files=["res://.godot/imported/skateboard text.png-b31fa6a1c1d636ab12d3532c48f7798c.ctex"]
 
 [params]
 

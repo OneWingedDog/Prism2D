@@ -790,3 +790,4 @@ tile_set = SubResource("TileSet_vanes")
 
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("2_o2p4y")]
 position = Vector2(-6, -124)
+scale = Vector2(1.5999982, 1.5999982)
