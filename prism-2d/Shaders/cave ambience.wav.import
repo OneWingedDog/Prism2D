@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bv4ftxn58gvph"
+path="res://.godot/imported/cave ambience.wav-47c414f974b2e0c58b0eaa1a68eca41f.sample"
+
+[deps]
+
+source_file="res://Shaders/cave ambience.wav"
+dest_files=["res://.godot/imported/cave ambience.wav-47c414f974b2e0c58b0eaa1a68eca41f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
