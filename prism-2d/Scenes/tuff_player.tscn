@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfraso4yqpgr6" path="res://Scripts/character_body_2d.gd" id="1_vmvto"]
 [ext_resource type="Shader" uid="uid://ct7d0vy6fqa0b" path="res://Shaders/ColorChoser.gdshader" id="2_67frc"]
-[ext_resource type="Texture2D" uid="uid://bjl848edh75hh" path="res://Assets/Sprites/Player/walking.png" id="5_67frc"]
+[ext_resource type="Texture2D" uid="uid://bjl848edh75hh" path="res://Assets/Sprites/Player/Walking.png" id="5_67frc"]
 [ext_resource type="Texture2D" uid="uid://t7j0wn1i8od6" path="res://Assets/Sprites/Player/Falling-Sheet.png" id="7_67frc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_whtbs"]
@@ -340,8 +340,8 @@ position_smoothing_speed = 8.0
 [node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=15294725]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=244824990]
-position = Vector2(0, 16.071447)
-scale = Vector2(0.7, 0.7)
+position = Vector2(0, 7.142866)
+scale = Vector2(0.7, 0.9142865)
 shape = SubResource("CapsuleShape2D_dxols")
 debug_color = Color(0.75081027, 0.45956635, 5.7756904e-07, 0.41960785)
 

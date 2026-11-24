@@ -10,7 +10,7 @@
 # -onewingd
 
 extends CharacterBody2D
-var speedmax = 10000
+var speedmax = 12345 #dosent do anything but its funny to leave in
 @onready var speed = 1000
 var airborne: bool = false
 var jumpv = -900
@@ -20,7 +20,7 @@ var jump:bool
 var terminal_velocity:int = 10000
 @onready var oldinpt
 @onready var input_direction:Vector2
-@onready var incnum:float = 0
+@onready var incnum:float = 0 #this is the acelleration
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var touchingwall:bool 
 var counteractingforce = 0
@@ -33,8 +33,14 @@ enum State {Idle, Walk, Attacking}
 
 func get_input():
 	
+
+	
 	if input_direction.x == (1.0) or (-1.0) :
 		oldinpt = input_direction
+	
+	print(input_direction.x)
+	print(oldinpt.x)
+	print(incnum)
 	
 	#counteractingforce = counteractingforce 
 	#if counteractingforce < 50:
@@ -42,6 +48,9 @@ func get_input():
 	
 	input_direction = Input.get_vector("Left", "Right", "ui_text_backspace", "Jump")
 	
+
+
+
 	
 	
 	
@@ -72,7 +81,9 @@ func get_input():
 			jump = true 
 
 	if not oldinpt == input_direction and jump == false :
-		incnum = 0
+		incnum = 0 
+	elif not oldinpt.x == input_direction.x and jump == true :
+		incnum = incnum * 0.7
 
 	velocity.y = velocity.y + inum
 	
