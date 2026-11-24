@@ -10,8 +10,8 @@
 # -onewingd
 
 extends CharacterBody2D
-var speedmax = 800
-@onready var speed = 800
+var speedmax = 10000
+@onready var speed = 1000
 var airborne: bool = false
 var jumpv = -900
 @onready var inum = 0
@@ -110,10 +110,10 @@ func _physics_process(delta):
 		if velocity.y > 0:
 			inum = inum/2
 	
-	if not incnum > 0.9:
-		incnum = incnum + 0.025
+	if not incnum > 1.4:
+		incnum = incnum + 0.05
 	else:
-		incnum = 1
+		incnum = 1.5
 	
 
 
