@@ -584,10 +584,11 @@ position = Vector2(-20.122849, -25.076187)
 shape = SubResource("RectangleShape2D_0eb53")
 
 [node name="Lurker" parent="." unique_id=1723957391 instance=ExtResource("8_jwcuc")]
-position = Vector2(-590, -93)
+position = Vector2(-590, -139.99997)
+scale = Vector2(7.140322, 7.140322)
 
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("1_3ncjb")]
-position = Vector2(17667, -6230)
+position = Vector2(-433, -139)
 scale = Vector2(1.7999994, 1.7999994)
 
 [node name="Screenshot20260730212409" type="Sprite2D" parent="." unique_id=2007918606]

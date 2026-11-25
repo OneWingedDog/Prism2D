@@ -1,15 +1,32 @@
 [gd_scene format=3 uid="uid://lxhifcski33"]
 
-[ext_resource type="Texture2D" uid="uid://bl8fj4ijl1wb1" path="res://Assets/Sprites/lurker walk.png" id="1_ajnqr"]
+[ext_resource type="Texture2D" uid="uid://bb22x7q032spc" path="res://Assets/Sprites/lurker 2 idle.png" id="1_ajnqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsw8a"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cp5px"]
 atlas = ExtResource("1_ajnqr")
-region = Rect2(32, 0, 16, 28)
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll760"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
 "frames": [{
-"duration": 3.0,
+"duration": 35.0,
+"texture": SubResource("AtlasTexture_dsw8a")
+}, {
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_cp5px")
+}, {
+"duration": 9.0,
+"texture": SubResource("AtlasTexture_ll760")
+}, {
+"duration": 22.0,
 "texture": SubResource("AtlasTexture_cp5px")
 }],
 "loop": 1,
@@ -27,7 +44,7 @@ scale = Vector2(6.4603167, 6.4603167)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=537691076]
 sprite_frames = SubResource("SpriteFrames_0eb53")
-frame_progress = 0.8890112
+frame_progress = 0.09170587
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/AnimatedSprite2D" unique_id=405100304]
 position = Vector2(-0.5, 1)
