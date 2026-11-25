@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dlsvcvn8mr2n" path="res://Assets/Sprites/Forest Sheet.png" id="1_80ole"]
 [ext_resource type="Texture2D" uid="uid://0ukuseus5udp" path="res://Assets/Sprites/Forest Sheet Pt2.png" id="2_a67es"]
 [ext_resource type="PackedScene" uid="uid://1n40uo005tr6" path="res://Scenes/tuff_player.tscn" id="2_o2p4y"]
+[ext_resource type="AudioStream" uid="uid://bunmg6iuh54ry" path="res://Assets/Audio/Music/Cold Forest.wav" id="4_84nyh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2p4y"]
 texture = ExtResource("1_80ole")
@@ -791,3 +792,7 @@ tile_set = SubResource("TileSet_vanes")
 [node name="Tuff player" parent="." unique_id=1752257990 instance=ExtResource("2_o2p4y")]
 position = Vector2(-6, -124)
 scale = Vector2(1.5999982, 1.5999982)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1294400888]
+stream = ExtResource("4_84nyh")
+autoplay = true

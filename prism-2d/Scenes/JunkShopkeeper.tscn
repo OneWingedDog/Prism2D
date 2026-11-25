@@ -1,153 +1,55 @@
 [gd_scene format=3 uid="uid://d10a7mri1bi4s"]
 
-[ext_resource type="Texture2D" uid="uid://cwupfbftjwtjl" path="res://Assets/Sprites/shopkeeper temp-Sheet.png" id="1_e84f3"]
-[ext_resource type="Script" uid="uid://b38uu8ujfdn3g" path="res://Scenes/junk_shopkeeper.gd" id="1_q7yx2"]
+[sub_resource type="GDScript" id="GDScript_whi3m"]
+script/source = "extends Node2D
+
+@onready var timer: Timer = $Timer
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var area_2d: Area2D = $Area2D
+@export var hard_can_interact: bool = true
+var can_interact = false
+var current_dialogue = null
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group(\"Player\") and hard_can_interact:
+		can_interact = true
+		print(\"inside npc \",)
+
+
+func _on_timer_timeout() -> void:
+	if animated_sprite_2d.animation != \"fall asleep\":
+		animated_sprite_2d.play(\"fall asleep\")
+		pass
+	elif animated_sprite_2d.animation == \"fall asleep\":
+		animated_sprite_2d.play(\"wake up!!\")
+		await animated_sprite_2d.animation_finished
+		timer.start()
+		animated_sprite_2d.play(\"idle\")
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vanes"]
 size = Vector2(100.68628, 66.27451)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y635q"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(201, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wglku"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(268, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7bmtk"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(335, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hep45"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(469, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8gwr"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(536, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yjnqf"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(603, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b8q0m"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(670, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r7rlt"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(737, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vscnu"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(0, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7jjw"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(67, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sjv6"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(603, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xmcee"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(670, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dwb4"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(536, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ws4r6"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(469, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7jgmm"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(335, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_41154"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(268, 0, 67, 65)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ubu8l"]
-atlas = ExtResource("1_e84f3")
-region = Rect2(201, 0, 67, 65)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y635q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wglku")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7bmtk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hep45")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k8gwr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yjnqf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b8q0m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r7rlt")
-}],
+"frames": [],
 "loop": 0,
 "name": &"fall asleep",
 "speed": 10.0
 }, {
-"frames": [{
-"duration": 34.0,
-"texture": SubResource("AtlasTexture_vscnu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7jjw")
-}, {
-"duration": 12.0,
-"texture": SubResource("AtlasTexture_vscnu")
-}],
+"frames": [],
 "loop": 1,
 "name": &"idle",
 "speed": 10.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0sjv6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xmcee")
-}, {
-"duration": 1.3,
-"texture": SubResource("AtlasTexture_5dwb4")
-}, {
-"duration": 1.3,
-"texture": SubResource("AtlasTexture_ws4r6")
-}, {
-"duration": 1.3,
-"texture": SubResource("AtlasTexture_7jgmm")
-}, {
-"duration": 1.3,
-"texture": SubResource("AtlasTexture_41154")
-}, {
-"duration": 1.3,
-"texture": SubResource("AtlasTexture_ubu8l")
-}],
+"frames": [],
 "loop": 0,
 "name": &"wake up!!",
 "speed": 10.0
 }]
 
 [node name="JunkShopkeeper" type="Node2D" unique_id=425609000]
-script = ExtResource("1_q7yx2")
+script = SubResource("GDScript_whi3m")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1608325509]
 scale = Vector2(1.5692307, 1.5692308)
@@ -163,7 +65,7 @@ autostart = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1725526911]
 scale = Vector2(1.5692307, 1.5692308)
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"wake up!!"
+animation = &"fall asleep"
 autoplay = "idle"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

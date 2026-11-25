@@ -1,8 +1,7 @@
 [gd_scene format=4 uid="uid://byepplfspo8xv"]
 
-[ext_resource type="Texture2D" uid="uid://b65f64ycmbw87" path="res://Assets/Sprites/Levels/Cavee/Cave Ground Set.png" id="1_7sqml"]
+[ext_resource type="Texture2D" uid="uid://1m77vafq5qiy" path="res://Assets/Sprites/Levels/Cavee/Cave Ground Set.png" id="1_7sqml"]
 [ext_resource type="Texture2D" uid="uid://cvvwwuyn8iqdx" path="res://Assets/Sprites/Levels/Junk Shop/Junk shop.png" id="2_fwrl6"]
-[ext_resource type="PackedScene" uid="uid://d10a7mri1bi4s" path="res://Scenes/JunkShopkeeper.tscn" id="2_oi8go"]
 [ext_resource type="PackedScene" uid="uid://1n40uo005tr6" path="res://Scenes/tuff_player.tscn" id="3_0mu31"]
 [ext_resource type="Texture2D" uid="uid://bxiaxg4i26dcf" path="res://Assets/Sprites/pill bottle.png" id="4_0mu31"]
 
@@ -596,10 +595,6 @@ tile_set = SubResource("TileSet_0eb53")
 tile_set = SubResource("TileSet_vanes")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1245199, 65536, 1, -1179663, 65536, 2, -1245198, 131072, 1, -1179662, 131072, 2, -1048594, 262144, 5, -983058, 262144, 6, -1048593, 327680, 5, -983057, 327680, 6)
-
-[node name="JunkShopkeeper" parent="." unique_id=425609000 instance=ExtResource("2_oi8go")]
-position = Vector2(-1, -126)
-scale = Vector2(2.4607868, 2.4607868)
 
 [node name="PillBottle" type="Sprite2D" parent="." unique_id=812889983]
 position = Vector2(-89, -126.00001)

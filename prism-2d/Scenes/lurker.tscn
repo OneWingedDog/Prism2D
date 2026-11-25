@@ -2,37 +2,73 @@
 
 [ext_resource type="Texture2D" uid="uid://bb22x7q032spc" path="res://Assets/Sprites/lurker 2 idle.png" id="1_ajnqr"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajnqr"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(128, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dsw8a"]
 atlas = ExtResource("1_ajnqr")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cp5px"]
 atlas = ExtResource("1_ajnqr")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ll760"]
 atlas = ExtResource("1_ajnqr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0wgd"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ica06"]
+atlas = ExtResource("1_ajnqr")
 region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc5ye"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
 "frames": [{
 "duration": 35.0,
+"texture": SubResource("AtlasTexture_ajnqr")
+}, {
+"duration": 13.0,
 "texture": SubResource("AtlasTexture_dsw8a")
 }, {
-"duration": 12.0,
+"duration": 15.0,
 "texture": SubResource("AtlasTexture_cp5px")
 }, {
-"duration": 9.0,
-"texture": SubResource("AtlasTexture_ll760")
-}, {
-"duration": 22.0,
-"texture": SubResource("AtlasTexture_cp5px")
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_dsw8a")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll760")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0wgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ica06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc5ye")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vanes"]
+size = Vector2(18.265358, 18.574942)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0eb53"]
 size = Vector2(13, 26)
@@ -40,12 +76,20 @@ size = Vector2(13, 26)
 [node name="Lurker" type="Node2D" unique_id=1723957391]
 scale = Vector2(6.4603167, 6.4603167)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=537691076]
+sprite_frames = SubResource("SpriteFrames_0eb53")
+animation = &"jump"
+autoplay = "default"
+frame = 2
+frame_progress = 0.14534701
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=102258911]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=537691076]
-sprite_frames = SubResource("SpriteFrames_0eb53")
-frame_progress = 0.09170587
+[node name="Leap hitbox" type="CollisionShape2D" parent="CharacterBody2D" unique_id=265047584]
+z_index = 1
+shape = SubResource("RectangleShape2D_vanes")
+debug_color = Color(0.96091825, 9.62615e-08, 0.51604915, 0.41960785)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/AnimatedSprite2D" unique_id=405100304]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=405100304]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_0eb53")
