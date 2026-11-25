@@ -1,34 +1,43 @@
 [gd_scene format=3 uid="uid://lxhifcski33"]
 
 [ext_resource type="Texture2D" uid="uid://bb22x7q032spc" path="res://Assets/Sprites/lurker 2 idle.png" id="1_ajnqr"]
+[ext_resource type="Script" uid="uid://bso6qj7wkr7fc" path="res://Scenes/LurkerBehavior.gd" id="1_dsw8a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ajnqr"]
 atlas = ExtResource("1_ajnqr")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dsw8a"]
 atlas = ExtResource("1_ajnqr")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0wgd"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ica06"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc5ye"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shhge"]
+atlas = ExtResource("1_ajnqr")
 region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hil6f"]
+atlas = ExtResource("1_ajnqr")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cp5px"]
 atlas = ExtResource("1_ajnqr")
-region = Rect2(192, 0, 32, 32)
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ll760"]
 atlas = ExtResource("1_ajnqr")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o0wgd"]
-atlas = ExtResource("1_ajnqr")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ica06"]
-atlas = ExtResource("1_ajnqr")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nc5ye"]
-atlas = ExtResource("1_ajnqr")
-region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0eb53"]
 animations = [{
@@ -36,13 +45,7 @@ animations = [{
 "duration": 35.0,
 "texture": SubResource("AtlasTexture_ajnqr")
 }, {
-"duration": 13.0,
-"texture": SubResource("AtlasTexture_dsw8a")
-}, {
-"duration": 15.0,
-"texture": SubResource("AtlasTexture_cp5px")
-}, {
-"duration": 5.0,
+"duration": 7.0,
 "texture": SubResource("AtlasTexture_dsw8a")
 }],
 "loop": 1,
@@ -51,9 +54,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ll760")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_o0wgd")
 }, {
 "duration": 1.0,
@@ -61,6 +61,31 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nc5ye")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_shhge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hil6f")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_shhge")
+}],
+"loop": 0,
+"name": &"embaressed",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp5px")
+}],
+"loop": 1,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll760")
 }],
 "loop": 1,
 "name": &"jump",
@@ -75,13 +100,12 @@ size = Vector2(13, 26)
 
 [node name="Lurker" type="Node2D" unique_id=1723957391]
 scale = Vector2(6.4603167, 6.4603167)
+script = ExtResource("1_dsw8a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=537691076]
 sprite_frames = SubResource("SpriteFrames_0eb53")
-animation = &"jump"
+animation = &"embaressed"
 autoplay = "default"
-frame = 2
-frame_progress = 0.14534701
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=102258911]
 
@@ -91,5 +115,5 @@ shape = SubResource("RectangleShape2D_vanes")
 debug_color = Color(0.96091825, 9.62615e-08, 0.51604915, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=405100304]
-position = Vector2(-0.5, 1)
+position = Vector2(-0.46437353, 3.0958235)
 shape = SubResource("RectangleShape2D_0eb53")
